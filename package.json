@@ -1,0 +1,20 @@
+{
+  "name": "my-vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "vite": "^5.4.1",
+    "vite-plugin-clean": "^1.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.78.0"
+  }
+}

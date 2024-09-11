@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="description" content="Альпака">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.scss">
+  <title>Альпака</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__flex">
+          <a href="./index.html" class="header__logo logo" aria-label="На главную">
+            <img class="logo__img" src="./img/svg/logo.svg" alt="Логотип">
+          </a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#" aria-label="На главную">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link_dd" href="#" aria-label="Основное меню">Основное меню
+                  <img class="menu__icon" src="./img/svg/drop.svg" alt="">
+                </a>
+                <ul class="submenu">
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="#" aria-label="Заказать вёрстку">Заказать вёрстку</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="#" aria-label="Отправить макет на проверку">Отправить макет на проверку</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a class="submenu__link" href="#" aria-label="Хочу работать у вас">Хочу работать у вас</a>
+                  </li>
+                  <li class="submenu__item submenu__item_dd">
+                    <a class="submenu__link" href="#" aria-label="Есть предложение по работе с кл..">Есть предложение по работе с кл...
+                      <img class="submenu__icon" src="./img/svg/drop.svg" alt="">
+                    </a>
+                    <ul class="submenu-right">
+                      <li class="submenu__right-item">
+                        <a class="submenu__right-link" href="#" aria-label="У меня есть оффер">У меня есть оффер</a>
+                      </li>
+                      <li class="submenu__right-item">
+                        <a class="submenu__right-link" href="#" aria-label="Сделать партнёром">Сделать партнёром</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#" aria-label="Наши сервисы">Наши сервисы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#" aria-label="Контакты">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__link" href="tel:+13212223333" aria-label="Позвонить +13212223333">
+            <img src="./img/svg/phone.svg" alt="">
+            <span>+1 (321) 222 - 33 -33</span>
+          </a>
+          <button class="header__burger-btn" id="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__overlay" id="overlay"></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+@media (max-width: 992px) {
+    .header__burger-btn {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        right: -374px;
+        top: 80px;
+        width: 374px;
+        height: 100%;
+        background-color: rgba(19, 20, 23, 1);
+        transition: transform .5s;
+        z-index: 2;
+        overflow: auto;
+
+        &__item {
+            width: 100%;
+            background-color: rgba(37, 40, 48, 1);
+
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+        }
+    }
+
+    .submenu {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        background-color: rgba(19, 20, 23, 1);
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.25s ease, opacity 0.25s ease;
+        position: static;
+
+        &__item {
+            width: 100%;
+            padding: unset;
+            background-color: rgba(37, 40, 48, 1);
+
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            border-bottom: unset;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &__link {
+            padding: 20px;
+        }
+
+        &.show {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        &__link {
+            display: block;
+
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+        }
+
+        &__item.active &__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    .submenu-right {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        gap: 1px;
+        background-color: rgba(19, 20, 23, 1);
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease, opacity 0.25s ease;
+
+        &-item:last-child {
+            border-radius: unset;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &.show {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .submenu__right-item {
+            padding: 20px;
+            border-bottom: unset;
+        }
+    }
+
+    .submenu-right .submenu__right-item:first-child {
+        border-radius: unset;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .menu__link {
+        display: flex;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .menu__link.active {
+        background-color: rgba(19, 20, 23, 1);
+    }
+
+    .active .submenu__link {
+        background-color: rgb(19, 20, 23);
+    }
+
+    .header.open .menu {
+        transform: translateX(-100%);
+    }
+
+    .menu__link:hover {
+        color: #fff;
+    }
+
+    .menu__link.active .menu__icon {
+        transform: rotate(180deg);
+    }
+
+}
+
+@media(max-width: 576px) {
+    .menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .header__link span {
+        display: none;
+    }
+
+    .header__flex {
+        justify-content: end;
+    }
+
+    .header__logo {
+        margin-right: auto;
+    }
+}
+
+@media (hover: hover) {
+    .menu__link:hover {
+        color: #fff;
+    }
+
+    .header__link:hover {
+        color: #fff;
+    }
+
+    .menu__item:hover .submenu {
+        display: block;
+    }
+
+    .submenu__item_dd:hover .submenu-right {
+        display: block;
+    }
+
+    .menu__item:hover .menu__icon {
+        transform: rotate(180deg);
+    }
+
+    .submenu__item:hover .submenu__icon {
+        transform: rotate(90deg);
+    }
+
+    .menu__link:hover {
+        color: rgba(235, 87, 87, 1);
+    }
+
+    .header__link:hover {
+        color: rgba(235, 87, 87, 1);
+    }
+
+}
