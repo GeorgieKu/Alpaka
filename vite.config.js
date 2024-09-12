@@ -2,14 +2,14 @@ import { defineConfig } from 'vite';
 
 
 export default defineConfig({
-  root: 'public',  // Корневая директория
+  root: 'public', 
   build: {
-    outDir: '../dist',  // Куда будет сохранена сборка
-    emptyOutDir: true,  // Очистка папки dist перед сборкой
+    outDir: '../dist',  
+    emptyOutDir: true,  
     rollupOptions: {
-      input: './public/index.html',  // Входной файл
+      input: './public/index.html', 
       output: {
-        assetFileNames: 'assets/[name][extname]',  // Все ассеты в одну папку
+        assetFileNames: 'assets/[name][extname]', 
         entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
       },
